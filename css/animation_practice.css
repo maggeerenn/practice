@@ -1,0 +1,67 @@
+/* this is where all of your CSS styles go */
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+.grid_container {
+    width: 200px;
+    height: 100px;
+    position: relative;
+    left: 50%;
+    top: 48%;
+    margin-top: -50px;
+    margin-left: -100px;
+}
+
+.mono {
+    font-family: "Avenir Next Condensed", serif;
+    font-size: 6em;
+    float: left;
+}
+
+@keyframes l_move {
+    0%       { top: 0; left: 0; color: black}
+    25%      { top: -150px; left: 0; }
+    50% 	 { top: -150px; left: 120px; }
+    100%     { top: 0; left: 120px; color: cadetblue; }
+}
+
+.l {
+    position: relative;
+    animation: l_move 3s alternate infinite cubic-bezier(1,0,0,1);
+}
+
+@keyframes e_move {
+    0% { top: 0; color: black;}
+    50% {top: -300px; color: black}
+    100% { top: 0px; color: cadetblue; }
+}
+
+.e{
+    position: relative;
+    animation: e_move 3s infinite ease-in-out;
+}
+
+@keyframes a_move {
+    0% { top: 0; color: black;}
+    50% { top: 300px; color: black; }
+    100% { top: 0; color: cadetblue; }
+}
+
+.a {
+    position: relative;
+    animation: a_move 3s infinite ease-in-out;
+}
+
+
+@keyframes p_move {
+    0%       { top: 0; left: 0; color: black}
+    25%      { top: 150px; left: 0; }
+    50% 	 { top: 150px; left: -120px; }
+    100%     { top: 0; left: -120px; color: cadetblue}
+}
+.p {
+    position: relative;
+    animation: p_move 3s alternate infinite ease-in;
+}
